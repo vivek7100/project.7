@@ -1,0 +1,144 @@
+
+﻿Q.1 Write a menu-driven program to implement arithmetic operations such as +, -, *, /, and % using UDF, switch case, and looping. Make sure that the program is endless until a certain letter is pressed.
+For example,
+Output:
+Press 1 for +
+Press 2 for -
+Press 3 for *
+Press 4 for /
+Press 5 for %
+Press 0 for the exit
+
+
+Enter your choice: 1
+Enter the first number: 5
+Enter the second number: 3
+Addition of 5 and 3 is 8
+
+
+Press 1 for +
+Press 2 for -
+Press 3 for *
+Press 4 for /
+Press 5 for %
+Press 0 for the exit
+
+
+Enter your choice: 4
+Enter the first number: 10
+Enter the second number: 5
+Division of 10 and 5 is 2
+
+
+Press 1 for +
+Press 2 for -
+Press 3 for *
+Press 4 for /
+Press 5 for %
+Press 0 for the exit
+
+
+Enter your choice: 0
+
+
+Ans: #include <stdio.h>
+#include<string.h>
+void add(int a, int b);
+void subtract(int a, int b);
+void multiply(int a, int b);
+void divide(int a, int b);
+void modulus(int a, int b);
+int main() {
+    int choice;
+    int a, b;
+    while (1) {
+        printf("Press 1 for +\n");
+        printf("Press 2 for -\n");
+        printf ("Press 3 for *\n");
+        printf("Press 4 for /\n");
+        printf("Press 5 for %\n");
+        printf("Press 0 for exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        if (choice == 0)
+            break;
+        printf("Enter the first number: ");
+        scanf("%d", &a);
+        printf("Enter the second number: ");
+        scanf("%d", &b);
+        switch (choice) {
+            case 1:
+                add(a, b);
+                break;
+            case 2:
+                subtract(a, b);
+                break;
+            case 3:
+                multiply(a, b);
+                break;
+            case 4:
+                divide(a, b);
+                break;
+            case 5:
+                modulus(a, b);
+                break;
+            default:
+                printf("Invalid choice\n");
+        }
+    }
+    return 0;
+}
+void add(int a, int b) {
+    printf("Addition of %d and %d is %d\n", a, b, a + b);
+}
+void subtract(int a, int b) {
+    printf("Subtraction of %d and %d is %d\n", a, b, a - b);
+}
+void multiply(int a, int b) {
+    printf("Multiplication of %d and %d is %d\n", a, b, a * b);
+}
+void divide(int a, int b) {
+    if (b != 0)
+        printf("Division of %d and %d is %f\n", a, b, (float)a / b);
+    else
+        printf("invalid!\n");
+}
+void modulus(int a, int b) {
+    if (b != 0)
+        printf("Modulus of %d and %d is %d\n", a, b, a % b);
+    else
+        printf("invalid!\n");
+}
+O\p: /tmp/PGhq8a0uPW.o
+Press 1 for +
+Press 2 for -
+Press 3 for *
+Press 4 for /
+Press 5 for %
+Press 0 for exit
+Enter your choice: 1
+Enter the first number: 5
+Enter the second number: 3
+Addition of 5 and 3 is 8
+Press 1 for +
+Press 2 for -
+Press 3 for *
+Press 4 for /
+Press 5 for %
+Press 0 for exit
+Enter your choice: 4
+Enter the first number: 10
+Enter the second number: 5
+Division of 10 and 5 is 2.000000
+Press 1 for +
+Press 2 for -
+Press 3 for *
+Press 4 for /
+Press 5 for %
+Press 0 for exit
+Enter your choice: 0
+
+
+
+
+=== Code Execution Successful ===
